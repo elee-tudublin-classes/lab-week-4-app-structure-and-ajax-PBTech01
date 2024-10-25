@@ -1,0 +1,11 @@
+<!-- loop through the list of todos and display the details for each todo in the list -->
+{% for todo in todoList %}
+    <!-- loop.index0 is provided by the for loop and displays the current item index -->
+    <li id="{{ loop.index0 }}" class="list-group-item  d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+            <div class="fw-bold">id: {{ todo.id }}</div>
+            {{ todo.details }}
+          </div>
+          <span class="badge text-bg-primary rounded-pill">completed: {{ todo.completed }}</span>
+    </li>
+{% endfor %}
